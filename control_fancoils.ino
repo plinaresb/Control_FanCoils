@@ -13,6 +13,8 @@ const char* ssid = "xxxx";
 const char* password = "xxxx";
 int contconexion = 0;
 
+#define equipo "xxx"  // ponemos un nombre al equipo de cada oficina. Put a name of machine in each office
+
 //Configuramos la conexión con telegram
 //We set up the telegram connection
 const char BotToken[] = "xxxxxxxxxxxxxxxxx";
@@ -185,6 +187,7 @@ void paginaOficina04() {
 //Funciones de encendido y apagado -- on/off functions
 
 void teclapower() {
+  if (equipo == "xxx") {
   Serial.println("ON");
   ac.setPower(true);
   ac.setMode(kCoolixHeat);
@@ -192,14 +195,24 @@ void teclapower() {
   ac.setTemp(kCoolixTempMax);
   ac.send();
   server.send(200, "text/html", oficina01); 
+  }
+  else {
+    
+  }
 }
 void teclaoff() {
+  if (equipo == "xxx") {
   Serial.println("OFF");
   ac.setPower(false);
   ac.send();
-  server.send(200, "text/html", oficina01); 
+  server.send(200, "text/html", oficina01);
+  }
+  else {
+    
+  } 
 }
 void teclapower1() {
+  if (equipo == "xxx") {
   Serial.println("ON");
   ac.setPower(true);
   ac.setMode(kCoolixHeat);
@@ -207,14 +220,24 @@ void teclapower1() {
   ac.setTemp(kCoolixTempMax);
   ac.send();
   server.send(200, "text/html", oficina02); 
+  }
+  else {
+    
+  }
 }
 void teclaoff1() {
+  if (equipo == "xxx") {
   Serial.println("OFF");
   ac.setPower(false);
   ac.send();
   server.send(200, "text/html", oficina02); 
+  }
+  else {
+    
+  }
 }
 void teclapower2() {
+  if (equipo == "xxx") {
   Serial.println("ON");
   ac.setPower(true);
   ac.setMode(kCoolixHeat);
@@ -222,14 +245,24 @@ void teclapower2() {
   ac.setTemp(kCoolixTempMax);
   ac.send();
   server.send(200, "text/html", oficina03); 
+  }
+  else {
+    
+  }
 }
 void teclaoff2() {
+  if (equipo == "xxx") {
   Serial.println("OFF");
   ac.setPower(false);
   ac.send();
   server.send(200, "text/html", oficina03); 
+  }
+  else {
+    
+  }
 }
 void teclapower3() {
+  if (equipo == "xxx") {
   Serial.println("ON");
   ac.setPower(true);
   ac.setMode(kCoolixHeat);
@@ -237,12 +270,21 @@ void teclapower3() {
   ac.setTemp(kCoolixTempMax);
   ac.send();
   server.send(200, "text/html", oficina04); 
+  }
+  else {
+    
+  }
 }
 void teclaoff3() {
+  if (equipo == "xxx") {
   Serial.println("OFF");
   ac.setPower(false);
   ac.send();
   server.send(200, "text/html", oficina04); 
+  }
+  else {
+    
+  }
 }
 
 //----------------------------------------------------------------------------------
