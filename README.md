@@ -8,7 +8,7 @@ en la oficina.
 Dichos equipos solo tienen un control mediante mando a distancia
 por infrarrojos. 
 
-Conectanda una nodeMCU V.1 (ESP8266) a la red wifi con un modulo
+Conectando una nodeMCU V.1 (ESP8266) a la red wifi con un modulo
 infrarrojo emisor, puedo controlarlos via web o con un bot en 
 telegram.
 
